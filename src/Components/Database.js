@@ -36,7 +36,6 @@ const Database = () => {
   
   return (
     <div className='database'>
-      <h1>Database</h1>
       <div className="list">
         {countriesArray.map(c =>
            <p className='country' 

@@ -1,10 +1,13 @@
 import React from "react";
+import Database from "./Components/Database";
+
+
 
 function App() {
   return (
     <div>
-      <h1><a href="http://rubberteeth.github.io/flags/database">Flag Database</a></h1>
-
+      <h1>Flag Database</h1>
+      <Database />
     </div>
   );
 }
