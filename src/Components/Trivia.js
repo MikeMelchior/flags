@@ -48,9 +48,11 @@ const Trivia = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (selectedAnswer.current === '') return
     if (selectedAnswer.current === country) alert('Nice!')
     else alert(`The correct answer was ${country}`)
     setLevel(prevLevel => prevLevel + 1)
+    selectedAnswer.current = ''
   }
   
   let answers = createMultipleChoiceArray();
