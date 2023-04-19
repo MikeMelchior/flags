@@ -1,16 +1,18 @@
 import React from 'react'
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import App from './App'
-// import Database from './Components/Database'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
-export default function RouteSwitch() {
-  return (
-    // <Router>
-    //   <Routes>
-    //     <Route path='/flags' element={<App />} />
-    //     <Route path='/database' element={<Database />} />
-    //   </Routes>
-    // </Router>
-    <App />
-  )
-}
+import App from './App'
+import Database from './Components/Database'
+import Trivia from './Components/Trivia'
+
+const RouteSwitch = () => (
+  <HashRouter>
+    <Routes>
+      <Route path='/' Component={App} />
+      <Route path='/database' Component={Database} />
+      <Route path='/trivia' Component={Trivia} />
+    </Routes>
+  </HashRouter>
+)
+
+export default RouteSwitch

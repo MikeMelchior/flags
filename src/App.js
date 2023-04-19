@@ -1,13 +1,12 @@
 import React from "react";
-import Database from "./Components/Database";
-
+import { Link } from "react-router-dom";
 
 
 function App() {
   return (
     <div>
-      <h1>Flag Database</h1>
-      <Database />
+      <h1> <Link to={'/database'}>Flag Database</Link></h1>
+      <h1> <Link to={'/trivia'}>Trivia</Link></h1>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../styles.css'
 import uniqid from 'uniqid'
+import { Link } from 'react-router-dom'
 
 const Database = () => {
   const [countries, setCountries] = useState({})
@@ -36,6 +37,8 @@ const Database = () => {
   
   return (
     <div className='database'>
+      <p className='home'><Link to={'/'}>Home</Link></p>
+      <h1>Flag Database</h1>
       <div className="list">
         {countriesArray.map(c =>
            <p className='country' 
