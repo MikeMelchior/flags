@@ -69,7 +69,7 @@ const Trivia = () => {
         <form action="">
           {answers.map(answer => (
             <p key={answer} onChange={e => selectedAnswer.current = e.target.id}>
-              <label>{answer}</label>
+              <label htmlFor={answer}>{answer}</label>
               <input type="radio" name="answer" id={answer} />
             </p>
           ))}
